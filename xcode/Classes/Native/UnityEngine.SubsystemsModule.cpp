@@ -1546,12 +1546,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m753F7B4281CC4D02C07AE9072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubsystemManager_RemoveIntegratedSubsystemByPtr_m90DE2A764E672B3F1510B54F1AEAF6C210A2707F (intptr_t ___ptr0, const RuntimeMethod* method);
 // System.Void UnityEngine.SubsystemBindings::DestroySubsystem(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubsystemBindings_DestroySubsystem_mD1475865CBF08D2F186001E997D23C6DC3B4168B (intptr_t ___nativePtr0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.IntegratedSubsystem::get_valid()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntegratedSubsystem_get_valid_mB9E8CDFF8A3564DF579F3257DC2D6F2746169D70 (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.IntegratedSubsystem::IsRunning()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134 (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method);
-// System.Boolean System.IntPtr::op_Inequality(System.IntPtr,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8 (intptr_t ___value10, intptr_t ___value21, const RuntimeMethod* method);
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // System.String UnityEngine.SubsystemDescriptorBindings::GetId(System.IntPtr)
@@ -1678,6 +1672,8 @@ inline IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * List_1_ge
 {
 	return ((  IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * (*) (List_1_t2DAF7481782912A6F8E6180AC19B83A5EEFEE9EF *, int32_t, const RuntimeMethod*))List_1_get_Item_mF00B574E58FB078BB753B05A3B86DD0A7A266B63_gshared_inline)(__this, ___index0, method);
 }
+// System.Boolean System.IntPtr::op_Inequality(System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8 (intptr_t ___value10, intptr_t ___value21, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.IntegratedSubsystem>::RemoveAt(System.Int32)
 inline void List_1_RemoveAt_m88A6E13476A34953224A13BE10F30C8E41491860 (List_1_t2DAF7481782912A6F8E6180AC19B83A5EEFEE9EF * __this, int32_t ___index0, const RuntimeMethod* method)
 {
@@ -1803,61 +1799,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntegratedSubsystem_Destroy_m5BFEA4F1ABE
 		__this->set_m_Ptr_0((intptr_t)(0));
 		return;
 	}
-}
-// System.Boolean UnityEngine.IntegratedSubsystem::get_running()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntegratedSubsystem_get_running_m3C6870588AA0F9816A3947F045BCB8F5662A9EC2 (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method)
-{
-	int32_t G_B3_0 = 0;
-	{
-		bool L_0;
-		L_0 = IntegratedSubsystem_get_valid_mB9E8CDFF8A3564DF579F3257DC2D6F2746169D70(__this, /*hidden argument*/NULL);
-		if (!L_0)
-		{
-			goto IL_0010;
-		}
-	}
-	{
-		bool L_1;
-		L_1 = IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134(__this, /*hidden argument*/NULL);
-		G_B3_0 = ((int32_t)(L_1));
-		goto IL_0011;
-	}
-
-IL_0010:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0011:
-	{
-		return (bool)G_B3_0;
-	}
-}
-// System.Boolean UnityEngine.IntegratedSubsystem::get_valid()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntegratedSubsystem_get_valid_mB9E8CDFF8A3564DF579F3257DC2D6F2746169D70 (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		intptr_t L_0 = __this->get_m_Ptr_0();
-		bool L_1;
-		L_1 = IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		return L_1;
-	}
-}
-// System.Boolean UnityEngine.IntegratedSubsystem::IsRunning()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134 (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method)
-{
-	typedef bool (*IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134_ftn) (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 *);
-	static IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (IntegratedSubsystem_IsRunning_mB6FCFBD67FB414D15BE2BEAE211A623DDFE52134_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.IntegratedSubsystem::IsRunning()");
-	bool icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
 }
 // System.Void UnityEngine.IntegratedSubsystem::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntegratedSubsystem__ctor_mCD638F6C367F1B83B1CB62130E570CA64A757DCE (IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002 * __this, const RuntimeMethod* method)

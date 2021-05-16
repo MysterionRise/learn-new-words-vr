@@ -598,6 +598,15 @@ public:
 };
 
 
+// UnityEngine.Bindings.NativePropertyAttribute
+struct NativePropertyAttribute_t300C37301B5C27B1EECB6CBE7EED16EEDA11975A  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
+{
+public:
+
+public:
+};
+
+
 // System.RuntimeTypeHandle
 struct RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
 {
@@ -625,24 +634,6 @@ public:
 
 public:
 	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(StaticAccessorType_tFA86A321ADAC16A48DF7FC82F8FBBE5F71D2DC4C, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-
-// UnityEngine.Bindings.TargetType
-struct TargetType_tBE103EBCFE59544A834B8108A56B2A91F7CBE1DF 
-{
-public:
-	// System.Int32 UnityEngine.Bindings.TargetType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(TargetType_tBE103EBCFE59544A834B8108A56B2A91F7CBE1DF, ___value___2)); }
 	inline int32_t get_value___2() const { return ___value___2; }
 	inline int32_t* get_address_of_value___2() { return &___value___2; }
 	inline void set_value___2(int32_t value)
@@ -684,24 +675,6 @@ public:
 	inline void set_m_debuggingModes_0(int32_t value)
 	{
 		___m_debuggingModes_0 = value;
-	}
-};
-
-
-// UnityEngine.Bindings.NativePropertyAttribute
-struct NativePropertyAttribute_t300C37301B5C27B1EECB6CBE7EED16EEDA11975A  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
-{
-public:
-	// UnityEngine.Bindings.TargetType UnityEngine.Bindings.NativePropertyAttribute::<TargetType>k__BackingField
-	int32_t ___U3CTargetTypeU3Ek__BackingField_5;
-
-public:
-	inline static int32_t get_offset_of_U3CTargetTypeU3Ek__BackingField_5() { return static_cast<int32_t>(offsetof(NativePropertyAttribute_t300C37301B5C27B1EECB6CBE7EED16EEDA11975A, ___U3CTargetTypeU3Ek__BackingField_5)); }
-	inline int32_t get_U3CTargetTypeU3Ek__BackingField_5() const { return ___U3CTargetTypeU3Ek__BackingField_5; }
-	inline int32_t* get_address_of_U3CTargetTypeU3Ek__BackingField_5() { return &___U3CTargetTypeU3Ek__BackingField_5; }
-	inline void set_U3CTargetTypeU3Ek__BackingField_5(int32_t value)
-	{
-		___U3CTargetTypeU3Ek__BackingField_5 = value;
 	}
 };
 

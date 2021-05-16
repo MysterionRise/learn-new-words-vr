@@ -244,6 +244,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SkinnedMeshRenderer",
+            "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
@@ -301,6 +310,51 @@
             "nativeClass": "SphereCollider",
             "fullManagedTypeName": "UnityEngine.SphereCollider",
             "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimationClip",
+            "fullManagedTypeName": "UnityEngine.AnimationClip",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Animator",
+            "fullManagedTypeName": "UnityEngine.Animator",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimatorController",
+            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RuntimeAnimatorController",
+            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Avatar",
+            "fullManagedTypeName": "UnityEngine.Avatar",
+            "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
             ]
@@ -441,6 +495,15 @@
             ]
         },
         {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Motion",
+            "fullManagedTypeName": "UnityEngine.Motion",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity"
+            ]
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
@@ -506,13 +569,6 @@
             "managedAssemblyName": "Unity.XR.Management.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.Management.XRManagerSettings",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Oculus.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "Unity.XR.Oculus.OculusSettings",
             "moduleName": "",
             "usedInScenes": []
         },

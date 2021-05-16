@@ -182,10 +182,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Debug
 
-		//System.Boolean UnityEngine.Debug::get_isDebugBuild()
-		void Register_UnityEngine_Debug_get_isDebugBuild();
-		Register_UnityEngine_Debug_get_isDebugBuild();
-
 		//System.Int32 UnityEngine.Debug::ExtractStackTraceNoAlloc(System.Byte*,System.Int32,System.String)
 		void Register_UnityEngine_Debug_ExtractStackTraceNoAlloc();
 		Register_UnityEngine_Debug_ExtractStackTraceNoAlloc();
@@ -313,10 +309,6 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Input
 
 	//Start Registrations for type : UnityEngine.IntegratedSubsystem
-
-		//System.Boolean UnityEngine.IntegratedSubsystem::IsRunning()
-		void Register_UnityEngine_IntegratedSubsystem_IsRunning();
-		Register_UnityEngine_IntegratedSubsystem_IsRunning();
 
 		//System.Void UnityEngine.IntegratedSubsystem::SetHandle(UnityEngine.IntegratedSubsystem)
 		void Register_UnityEngine_IntegratedSubsystem_SetHandle();
@@ -527,6 +519,18 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_PhysicsScene_Internal_RaycastNonAlloc_Injected();
 
 	//End Registrations for type : UnityEngine.PhysicsScene
+
+	//Start Registrations for type : UnityEngine.Playables.PlayableHandle
+
+		//System.Boolean UnityEngine.Playables.PlayableHandle::IsValid_Injected(UnityEngine.Playables.PlayableHandle&)
+		void Register_UnityEngine_Playables_PlayableHandle_IsValid_Injected();
+		Register_UnityEngine_Playables_PlayableHandle_IsValid_Injected();
+
+		//System.Type UnityEngine.Playables.PlayableHandle::GetPlayableType_Injected(UnityEngine.Playables.PlayableHandle&)
+		void Register_UnityEngine_Playables_PlayableHandle_GetPlayableType_Injected();
+		Register_UnityEngine_Playables_PlayableHandle_GetPlayableType_Injected();
+
+	//End Registrations for type : UnityEngine.Playables.PlayableHandle
 
 	//Start Registrations for type : UnityEngine.PlayerConnectionInternal
 
@@ -988,14 +992,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.XR.InputTracking
 
-	//Start Registrations for type : UnityEngine.XR.Provider.XRStats
-
-		//System.Boolean UnityEngine.XR.Provider.XRStats::TryGetStat_Internal(System.IntPtr,System.String,System.Single&)
-		void Register_UnityEngine_XR_Provider_XRStats_TryGetStat_Internal();
-		Register_UnityEngine_XR_Provider_XRStats_TryGetStat_Internal();
-
-	//End Registrations for type : UnityEngine.XR.Provider.XRStats
-
 	//Start Registrations for type : UnityEngine.XR.Tango.TangoInputTracking
 
 		//System.Boolean UnityEngine.XR.Tango.TangoInputTracking::Internal_TryGetPoseAtTime(UnityEngine.XR.Tango.PoseData&)
@@ -1003,26 +999,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_XR_Tango_TangoInputTracking_Internal_TryGetPoseAtTime();
 
 	//End Registrations for type : UnityEngine.XR.Tango.TangoInputTracking
-
-	//Start Registrations for type : UnityEngine.XR.XRDisplaySubsystem
-
-		//System.Boolean UnityEngine.XR.XRDisplaySubsystem::TryGetAppGPUTimeLastFrame(System.Single&)
-		void Register_UnityEngine_XR_XRDisplaySubsystem_TryGetAppGPUTimeLastFrame();
-		Register_UnityEngine_XR_XRDisplaySubsystem_TryGetAppGPUTimeLastFrame();
-
-		//System.Boolean UnityEngine.XR.XRDisplaySubsystem::TryGetCompositorGPUTimeLastFrame(System.Single&)
-		void Register_UnityEngine_XR_XRDisplaySubsystem_TryGetCompositorGPUTimeLastFrame();
-		Register_UnityEngine_XR_XRDisplaySubsystem_TryGetCompositorGPUTimeLastFrame();
-
-		//System.Boolean UnityEngine.XR.XRDisplaySubsystem::TryGetDisplayRefreshRate(System.Single&)
-		void Register_UnityEngine_XR_XRDisplaySubsystem_TryGetDisplayRefreshRate();
-		Register_UnityEngine_XR_XRDisplaySubsystem_TryGetDisplayRefreshRate();
-
-		//System.Boolean UnityEngine.XR.XRDisplaySubsystem::TryGetMotionToPhoton(System.Single&)
-		void Register_UnityEngine_XR_XRDisplaySubsystem_TryGetMotionToPhoton();
-		Register_UnityEngine_XR_XRDisplaySubsystem_TryGetMotionToPhoton();
-
-	//End Registrations for type : UnityEngine.XR.XRDisplaySubsystem
 
 	//Start Registrations for type : UnityEngineInternal.Input.NativeInputSystem
 
