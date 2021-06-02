@@ -1,1 +1,3 @@
-{"root":[{"assemblyName":"Unity.XR.Management","nameSpace":"UnityEngine.XR.Management","className":"XRGeneralSettings","methodName":"AttemptInitializeXRSDKOnLoad","loadTypes":2,"isUnityClass":true},{"assemblyName":"Unity.XR.Management","nameSpace":"UnityEngine.XR.Management","className":"XRGeneralSettings","methodName":"AttemptStartXRSDKOnBeforeSplashScreen","loadTypes":3,"isUnityClass":true}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3040af1f0469b68b33aa803fea67b50d88b209e42e3aaf318fa9e71bf85e454e
+size 398
