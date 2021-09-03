@@ -5,13 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/VrMode.unity
+  - enabled: 0
+    path: Assets/test_trial/VrMode.unity
     guid: 4812ec05e87b8414abcdfe0d625c0e60
+  - enabled: 1
+    path: Assets/test_trial/Coursera_fin.unity
+    guid: f4e3cdb548b837147b60b27a6a0fdadc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
+      type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 5bfafec449772b746b296060af42bd5f,
       type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1a4c68ca72a83449f938d669337cb305,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 484f395171889ec41b45dbaf26232820,
       type: 2}

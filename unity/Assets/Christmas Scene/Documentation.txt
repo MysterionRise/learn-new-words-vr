@@ -1,0 +1,11 @@
+
+To import this Asset:
+
+1- Go to window/Package manager and install the post processing package
+
+2- Drag the map prefab located in the prefabs folder into the scene
+
+3- Add to the main camera, the camera script, and the post processing layer if you want
+
+
+This asset is a render of a christmas decorated scene, you can find all the models in the prefabs folder and easily drag them to a new scene

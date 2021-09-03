@@ -1,0 +1,9 @@
+﻿sound_code,слово,sound,sound_trigger,метка_seq1,название категории,,pic_name,№_pic,pic,№_old,pic_code,pic_file,pic_trigger,quest1_a,quest1_a_sound_id,quest1_a_sound,quest1_a_trigger,ans,quest1_b,quest1_b_sound_id,quest1_b_sound,quest1_b_sound_trigger,quest2_b,quest2_b_sound_id,quest2_b_sound,ans,quest2_b_sound_trigger,dis_for_EE,dis_for_FM,FM_Монитор,FM_VR,FM_Монитор_Smal,,FM_VR_smal,,FM_Монитор,FM_VR,dis_for_FM_VR,dis_for_FM
+,Duk,./Slova/duk.wav,,44,импл_новые_движ_VR,импл_,Lira,1,Lira1,,,/test/lira1.png,,,,,./Voprosi/test/lira FM imeet li struny.wav,да,,,,,,,,,,,./test/dub1.png,,,,,,,,,,
+,Fog,./Slova/fog.wav,,45,экспл_новые_движ_VR,экспл,Press,1,Press1,,,/test/press1.png,,,,,0,,,,./Voprosi/EE Vot.ogg,,,,./Voprosi/test/press EE S lepestkami li on.wav,нет,,./dis1.png,,,,,,,,,,,
+,Log,./Slova/log.wav,,46,импл_новые_покой_VR,импл_,Shtopor,1,Shtopor1,,,/test/shtopor1.png,,,,,./Voprosi/test/shtopor FM zelenyj li .wav,да,,,,,,,,,,,./test/lack1.png,,,,,,,,,,
+,Mit,./Slova/mit.wav,,47,экспл_новые_покой_VR,экспл,Vilka,1,Vilka1,,,/test/vilka1.png,,,,,0,,,,./Voprosi/EE Posmotrite eto.ogg,,,,./Voprosi/test/vilka EE fioletovyj li on.wav,нет,,./dis2.png,,,,,,,,,,,
+,Pur,./Slova/pur.wav,,14,импл_новые_движ_монитор,импл_,Davilka,1,Davilka1,,,/test/davilka.png,,,,,./Voprosi/test/davilka FM bumazhnyj li.wav,нет,,,,,,,,,,,./test/kom1.png,,,,,,,,,,
+,Null,./Slova/null.wav,,15,экспл_новые_движ_монитор,экспл,Domkrat,1,Domkrat1,,,/test/domkrat1.png,,,,,0,,,,./Voprosi/EE Pered Vami.ogg,,,,./Voprosi/test/domkat EE Iz metalla li on.wav,да,,./dis2.png,,,,,,,,,,,
+,Rig,./Slova/rig.wav,,16,импл_новые_покой_монитор,импл_,Lozka,1,Lozka1,,,/test/lozka1.png,,,,,./Voprosi/test/lozka FM ostryj li.wav,да,,,,,,,,,,,./test/kiy1.png,,,,,,,,,,
+,Sev,./Slova/sev.wav,,17,экспл_новые_покой_монитор,экспл,Numirator,1,Numirator1,,,/test/numirator1.png,,,,,0,,,,./Voprosi/EE Eto.ogg,,,,./Voprosi/test/numirator EE Imeet li on ruchku.wav,да,,./dis2.png,,,,,,,,,,,

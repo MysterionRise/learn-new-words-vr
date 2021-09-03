@@ -1,0 +1,11 @@
+﻿sound_code,слово,sound,sound_trigger,метка_seq1,название категории,,pic_name,№_pic,pic,№_old,pic_code,pic_file,pic_trigger,quest1_a,quest1_a_sound_id,quest1_a_sound,quest1_a_trigger,ans,quest1_b,quest1_b_sound_id,quest1_b_sound,quest1_b_sound_trigger,quest2_b,quest2_b_sound_id,quest2_b_sound,ans,quest2_b_sound_trigger,dis_for_EE,dis_for_FM,FM_Монитор,FM_VR,FM_Монитор_Smal,,FM_VR_smal,,FM_Монитор,FM_VR,dis_for_FM_VR,dis_for_FM
+,Chip,sound\\chip.wav,,41,экспл_реал_движ_VR,экспл,Chip,1,Chip1,,,pics\\chip1.jpg,,,,,,,,,sound\\EE_Eto.wav,,,,sound\\Chip_EE_is_dereva_li_on.wav,нет,,pics\\dis1.jpg,,,,,,,,,,,
+,Duk,sound\\duk.wav,,44,импл_новые_движ_VR,импл_,Lira,1,Lira1,,,pics\\lira1.jpg,,,,,sound\\lira_FM_imeet_li_struny.wav,да,,,,,,,,,,,pics\\dub1.jpg,,,,,,,,,,
+,Fog,sound\\fog.wav,,45,экспл_новые_движ_VR,экспл,Press,1,Press1,,,pics\\press1.jpg,,,,,0,,,,sound\\EE_Vot.wav,,,,sound\\press_EE_S_lepestkami_li_on.wav,нет,,pics\\dis2.jpg,,,,,,,,,,,
+,Log,sound\\log.wav,,46,импл_новые_покой_VR,импл_,Shtopor,1,Shtopor1,,,pics\\shtopor1.jpg,,,,,sound\\shtopor_FM_zelenyj_li.wav,да,,,,,,,,,,,pics\\lack1.jpg,,,,,,,,,,
+,Mit,sound\\mit.wav,,47,экспл_новые_покой_VR,экспл,Vilka,1,Vilka1,,,pics\\vilka1.jpg,,,,,0,,,,sound\\EE_Posmotrite_eto.wav,,,,sound\\vilka_EE_fioletovyj_li_on.wav,нет,,pics\\dis5.jpg,,,,,,,,,,,
+,Luk,sound\\luk.wav,,11,экспл_реал_движ_монитор,экспл,Luk,1,Luk1,,,pics\\luk.jpg,,,,,,,,,sound\\EE_Posmotrite_eto.wav,,,,sound\\Luk_EE_imeet_li_on_tetevu.wav,да,,pics\\dis3.jpg,,,,,,,,,,,
+,Pur,sound\\pur.wav,,14,импл_новые_движ_монитор,импл_,Davilka,1,Davilka1,,,pics\\davilka.jpg,,,,,sound\\davilka_FM_bumazhnyj_li.wav,нет,,,,,,,,,,,pics\\kom1.jpg,,,,,,,,,,
+,Null,sound\\null.wav,,15,экспл_новые_движ_монитор,экспл,Domkrat,1,Domkrat1,,,pics\\domkrat1.jpg,,,,,0,,,,sound\\EE_Pered_Vami.wav,,,,sound\\domkat_EE_Iz_metalla_li_on.wav,да,,pics\\dis4.jpg,,,,,,,,,,,
+,Rig,sound\\rig.wav,,16,импл_новые_покой_монитор,импл_,Lozka,1,Lozka1,,,pics\\lozka1.jpg,,,,,sound\\lozka_FM_ostryj_li.wav,да,,,,,,,,,,,pics\\kiy1.jpg,,,,,,,,,,
+,Sev,sound\\sev.wav,,17,экспл_новые_покой_монитор,экспл,Numirator,1,Numirator1,,,pics\\numirator1.jpg,,,,,0,,,,sound\\EE_Eto.wav,,,,sound\\numirator_EE_Imeet_li_on_ruchku.wav,да,,pics\\dis6.jpg,,,,,,,,,,,
