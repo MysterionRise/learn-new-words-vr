@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: ee93906173d95ba499f77c9348c63b59
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21100
   internalIDToNameTable:
   - first:
       74: -7881739814215078984
@@ -52,7 +52,7 @@ ModelImporter:
       takeName: Outfits_Jody_TempMotion
       internalID: 0
       firstFrame: 0
-      lastFrame: 301
+      lastFrame: 299
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
