@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEditor;
+using Debug = UnityEngine.Debug;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Valve.VR.Extras;
-using System.IO;
-using System;
+
 
 public class RandomAudio : MonoBehaviour
 {
@@ -24,6 +27,8 @@ public class RandomAudio : MonoBehaviour
     public GameObject leftPicture;
     public GameObject rightPicture;
 
+    private Stopwatch stopWatch = new Stopwatch();
+
     private string type = "";
     private string pic_file = "";
     private string word = "";
@@ -31,11 +36,12 @@ public class RandomAudio : MonoBehaviour
     private string trigger2 = "";
     private string dis = "";
     private string correct = "";
+    private bool isAnsweredInTime = false;
+    private bool isWaitingAnswer = false;
+    private bool isLaser = true;
 
     void Awake()
     {
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
         Debug.Log("start");
         animator = GetComponent<Animator>();
@@ -43,7 +49,7 @@ public class RandomAudio : MonoBehaviour
         animator.SetTrigger("Instruction");
         animator.SetBool("InstructionLoop", true);
         Debug.Log(audios);
-        // TODO manually csv
+
         TextAsset csvText = (TextAsset)Resources.Load<TextAsset>("test");
         lines = csvText.text.Split("\n"[0]);
 
@@ -51,65 +57,96 @@ public class RandomAudio : MonoBehaviour
         writer.WriteLine("category_type,word,time,correctness");
         writer.Flush();
         // TODO update to actual length
-        Invoke("EndInstruction", 49.0f);
+        Invoke("EndInstruction", 50.0f);
     }
+
 
     void Update()
     {
-        // Debug.Log(Vector3.Distance(leftPicture.transform.position, controller.transform.position));
-        // Debug.Log(Vector3.Distance(rightPicture.transform.position, controller.transform.position));
+        if (!isLaser && isWaitingAnswer) {
+            Debug.Log(Vector3.Distance(leftPicture.transform.position, controller.transform.position));
+            if (Vector3.Distance(leftPicture.transform.position, controller.transform.position) < 0.5f) 
+            {
+                Debug.Log("touched left");
+                stopWatch.Stop();
+                isAnsweredInTime = true;
+                isWaitingAnswer = false;
+                if (correct == "да") 
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "correct");
+                else
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "not_correct");
+                CancelInvoke("ShowCards");
+                Invoke("ShowCards", 0.1f);
+            } else if (Vector3.Distance(rightPicture.transform.position, controller.transform.position) < 0.5f) 
+            {
+                Debug.Log("touched right");
+                stopWatch.Stop();
+                isAnsweredInTime = true;
+                isWaitingAnswer = false;
+                if (correct == "нет") 
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "correct");
+                else
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "not_correct");
+                CancelInvoke("ShowCards");
+                Invoke("ShowCards", 0.1f);
+            }
+        }
     }
-
-
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
+
         if (e.target.name == "Da")
         {
+            Debug.Log("Da was clicked");
             if (!isStarted) 
             {
                 isStarted = true;
                 nextRound();
             }
-            if (isStarted) 
+            if (isStarted && isLaser && isWaitingAnswer) 
             {
-                writer.WriteLine("{0},{1},{2},{3}", type, pic_file, 0, correct);
+                stopWatch.Stop();
+                isAnsweredInTime = true;
+                isWaitingAnswer = false;
+                if (correct == "да")
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "correct");
+                else
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "not_correct");
                 writer.Flush();
+                CancelInvoke("ShowCards");
+                Invoke("ShowCards", 0.1f);
             }
-            Debug.Log("Da was clicked");
             
         } else if (e.target.name == "Net")
         {
             Debug.Log("Net was clicked");
-        }
-    }
-
-    public void PointerInside(object sender, PointerEventArgs e)
-    {
-        if (e.target.name == "Da")
-        {
-            Debug.Log("Da was entered");
-        }
-        else if (e.target.name == "Net")
-        {
-            Debug.Log("Net was entered");
-        }
-    }
-
-    public void PointerOutside(object sender, PointerEventArgs e)
-    {
-        if (e.target.name == "Da")
-        {
-            Debug.Log("Da was exited");
-        }
-        else if (e.target.name == "Net")
-        {
-            Debug.Log("Net was exited");
+            if (isStarted && isLaser && isWaitingAnswer) 
+            {
+                stopWatch.Stop();
+                isAnsweredInTime = true;
+                isWaitingAnswer = false;
+                if (correct == "нет")
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "correct");
+                else
+                    writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "not_correct");
+                writer.Flush();
+                CancelInvoke("ShowCards");
+                Invoke("ShowCards", 0.1f);
+            }
         }
     }
 
     void nextRound() 
     {
+        if (!isAnsweredInTime) 
+        {
+            isWaitingAnswer = false;
+            stopWatch.Stop();
+            writer.WriteLine("{0},{1},{2},{3}", type, pic_file, stopWatch.Elapsed, "not_correct");
+            writer.Flush();
+        }
+        isAnsweredInTime = false;
         animator.ResetTrigger("StartExperiment");
         animator.SetTrigger("EndIntro");
         string[] row = lines[currentRow].Split(',');
@@ -119,25 +156,37 @@ public class RandomAudio : MonoBehaviour
         if (type.Contains("VR"))
         {
             Debug.Log("VR is happenning");
-            if (type.Contains("импл")) {
+            if (type.Contains("покой")) 
+            {
+                Debug.Log("Laser is active");
+                laserPointer.active = true;
+                isLaser = true;
+            }
+            else 
+            {
+                Debug.Log("Laser is inactive");
+                laserPointer.active = false;
+                isLaser = false;
+            }
+            if (type.Contains("импл")) 
+            {
                 trigger1 = row[17].Replace(@"\\", @"/");
                 dis = row[29].Replace(@"\\", @"/");
                 correct = row[18];
                 Invoke ("AskQuestionFM", 1.0f);
             }
-            else {
+            else 
+            {
                 trigger1 = row[21].Replace(@"\\", @"/");
                 trigger2 = row[25].Replace(@"\\", @"/");
                 dis = row[28].Replace(@"\\", @"/");
                 correct = row[26];
-                Debug.Log(correct);
                 Invoke ("AskQuestionEE", 1.0f);
             }
 
         }
         currentRow++;
-        writer.WriteLine("{0},{1},{2},{3}", type, pic_file, 0, correct);
-        writer.Flush();
+        
     }
 
     void EndInstruction()
@@ -159,7 +208,7 @@ public class RandomAudio : MonoBehaviour
         audios[0].Play();
         animator.SetTrigger("StartExperiment");
         // TODO remove!!!!!
-        Invoke ("nextRound", 7.5f);
+        // Invoke ("nextRound", 7.5f);
         // TODO remove!!!!!
     }
 
@@ -174,6 +223,8 @@ public class RandomAudio : MonoBehaviour
     {
         animator.ResetTrigger("StopShowCards");
         animator.SetTrigger("ShowCards5sec");
+        stopWatch.Restart();
+        isWaitingAnswer = true;
         Material yes = Resources.Load<Material>("Da");
         Material no = Resources.Load<Material>("Net");
         leftPicture.GetComponent<MeshRenderer>().material = yes;
